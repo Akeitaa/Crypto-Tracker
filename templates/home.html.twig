@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include "common/_navbar_home.html.twig" %}
+    <div class="container py-5">
+        <div class="d-flex align-items-center justify-content-center colorWhite bgRedStars py-3">
+            <div>
+                <a href="{{ path('chart') }}" class="text-decoration-none"><h1 class="mb-0"><i class="fa-solid fa-plus"></i> {{ totalAmount }} €</h1></a>
+            </div>
+        </div>
+        <div class="padding-v-mobile">
+            {% for transactionMetaDTO in transactionMetaDTOs %}
+                <div class="d-flex align-items-center justify-content-between w-100 my-4">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <img class="width-1-5" alt="logo_crypto" src="{{ transactionMetaDTO.logoUrl }}"/>
+                        </div>
+                        <div class="colorWhite font-size-1-2 margin-left-0-3">
+                            {{ transactionMetaDTO.cryptoSymbol }}
+                        </div>
+                        <div class="colorGrey font-size-0-8 margin-left-0-3">
+                            ({{ transactionMetaDTO.cryptoName }})
+                        </div>
+                    </div>
+                    <div class="colorWhite font-size-08">
+                        {% if transactionMetaDTO.isInvestmentProfitable == true %}
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        {% else %}
+                            <i class="fa-solid fa-arrow-trend-down"></i>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="separator"></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

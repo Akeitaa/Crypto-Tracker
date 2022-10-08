@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include "common/_navbar_home.html.twig" %}
+    <div class="container py-5">
+        <h3 class="colorWhite text-center">Erreur</h3>
+    </div>
+    <div>
+        <p class="mb-5 text-center colorWhite">
+            {{ exception.message }}
+        </p>
+    </div>
+{% endblock %}

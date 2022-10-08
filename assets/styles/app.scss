@@ -1,0 +1,129 @@
+body {
+    background-color: black;
+}
+
+.bgRedStars {
+    background-image : url("../images/bg_sky_red.jpg");
+}
+
+.text-decoration-none
+{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.colorBlack {
+    color: #100f0f;
+}
+
+.colorGrey {
+    color: #efefef;
+}
+
+.colorLightGrey {
+    color: #D3D3D3;
+}
+
+.colorGreen {
+    color: #1fc36c;
+}
+
+.bgDark {
+    background-color: #100f0f !important;
+}
+
+.bgGreen {
+    background-color: #1fc36c !important;
+}
+
+.bgColorGrey {
+    background-color: #efefef !important;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.borderLeftNull {
+    border-left: 0px;
+}
+
+.btnCustom {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+}
+
+.btnCustom :hover {
+    background-color: #0a0a0a !important;
+    color: #efefef !important;
+}
+
+.height-vh-full
+{
+    height: 100vh !important;
+}
+
+.height-25
+{
+    height: 25rem;
+}
+
+.width-1-5
+{
+    width: 1.5rem;
+}
+
+.font-size-1-2
+{
+    font-size: 1.2rem;
+}
+
+.font-size-0-8
+{
+    font-size: 0.8rem;
+}
+
+.margin-left-0-3
+{
+    margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .padding-v-mobile
+    {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+    }
+}
+
+.separator
+{
+    border-bottom: 1px solid #efefef;
+}
+
+@font-face
+{
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+h1 , h2, h3, h4, h5 {
+    font-family: Roboto-Bold, serif !important;
+}
+
+body, p, button, label, input, span, a {
+    font-family: Roboto-Regular, serif !important;
+}
+
+.form-control:focus
+{
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 0 0 0.25rem white;
+}

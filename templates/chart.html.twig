@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Transaction{% endblock %}
+
+{% block body %}
+    {% include "common/_navbar_action.html.twig" with {'title': 'Vos Gains','return': 'home'} %}
+    <div class="container py-5 px-4 height-vh-full padding-v-mobile">
+        {{ render_chart(chart) }}
+    </div>
+{% endblock %}

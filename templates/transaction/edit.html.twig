@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Transaction{% endblock %}
+
+{% block body %}
+    {% include "common/_navbar_action.html.twig" with {'title': 'Éditer une transaction','return' : 'app_transaction_index'} %}
+    <div class="container py-5 px-4 height-vh-full padding-v-mobile">
+        {{ include('common/_messages_flash.html.twig') }}
+        {{ include('transaction/_form.html.twig', {'button_label': 'MODIFIER'}) }}
+    </div>
+{% endblock %}

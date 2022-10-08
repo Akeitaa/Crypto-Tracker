@@ -1,0 +1,36 @@
+{{ form_start(form,{
+    'method': 'post',
+    'action': path('app_transaction_delete', {'id': transaction.id}) ,
+    'attr': {'class': 'height-vh-full'}
+    }) }}
+<div class="d-flex flex-column justify-content-between height-25">
+    <div>
+        <div class="mb-4">
+            <div class="input-group">
+                <span class="input-group-text bgDark colorWhite"><i class="fa-solid fa-magnifying-glass"></i></span>
+                {{ form_widget(form.crypto,{'attr' : { 'class' : 'bgDark colorWhite borderLeftNull form-control-custom', 'disabled' : 'disabled'}}) }}
+            </div>
+            {{ form_errors(form.crypto) }}
+        </div>
+        <div class="mb-4">
+            <div class="input-group ">
+                <span class="input-group-text bgDark colorWhite"><i class="fa-solid fa-coins"></i></span>
+                {{ form_widget(form.quantity,{'attr' : { 'class' : 'bgDark colorWhite borderLeftNull form-control-custom', 'disabled' : 'disabled'}}) }}
+            </div>
+            {{ form_errors(form.quantity) }}
+        </div>
+        <div class="mb-4"  style="display: none">
+            <div class="input-group">
+                <span class="input-group-text bgDark colorWhite" style="padding-right: 18px !important;"><i class="fa-solid fa-euro-sign"></i></span>
+                {{ form_widget(form.price,{'attr' : { 'class' : 'bgDark colorWhite borderLeftNull form-control-custom','disabled' : 'disabled'}}) }}
+            </div>
+            {{ form_errors(form.price) }}
+        </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center pt-5">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ transaction.id) }}">
+        <button type="submit" class=" btn text-black btn-dark bgColorGrey btnCustom">{{ button_label }}</button>
+    </div>
+</div>
+
+{{ form_end(form) }}
