@@ -44,7 +44,7 @@ Dans le terminal, taper la commande : symfony serve
 Dans un autre terminal, taper : npm run build
 
 12.Rendez vous sur : localhost:8000
-Welcome to Crypto Tracker :)
+Welcome to Crypto Tracker
 
 #TEST INTEGRATION
 Pour jouer les tests d'intégration, dans le terminal taper : php bin/phpunit
